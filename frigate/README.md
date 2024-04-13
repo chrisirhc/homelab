@@ -1,3 +1,5 @@
+# Frigate Configuration
+
 Make sure to add the .env
 
 - [ ] Get restream working
