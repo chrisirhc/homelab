@@ -1,0 +1,46 @@
+mqtt:
+  enabled: False
+
+# go2rtc:
+#   streams:
+#     front_door:
+#       - rtsp://admin:{FRIGATE_RTSP_PASSWORD}@192.168.1.79:554/Streaming/Channels/202
+#       - "ffmpeg:front_door#video=h265#audio=opus"
+
+cameras:
+  front_door:
+    enabled: True
+    ffmpeg:
+      inputs:
+        - path: rtsp://admin:{FRIGATE_RTSP_PASSWORD}@192.168.1.79:554/Streaming/Channels/102
+          roles:
+            - record
+      # inputs:
+      #   - path: rtsp://127.0.0.1:8554/front_door
+      #     input_args: preset-rtsp-restream
+      #     roles:
+      #       - record
+
+  front_gate:
+    enabled: True
+    ffmpeg:
+      inputs:
+        - path: rtsp://admin:{FRIGATE_RTSP_PASSWORD}@192.168.1.79:554/Streaming/Channels/202
+          roles:
+            - detect
+
+  living_room:
+    enabled: True
+    ffmpeg:
+      inputs:
+        - path: rtsp://admin:{FRIGATE_RTSP_PASSWORD}@192.168.1.79:554/Streaming/Channels/302
+          roles:
+            - detect
+
+  kitchen:
+    enabled: True
+    ffmpeg:
+      inputs:
+        - path: rtsp://admin:{FRIGATE_RTSP_PASSWORD}@192.168.1.79:554/Streaming/Channels/402
+          roles:
+            - detect
