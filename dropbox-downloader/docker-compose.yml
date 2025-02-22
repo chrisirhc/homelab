@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  dropbox-downloader:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - /volume1/misc/dropbox-backup-2025:/downloads
+      - /volume1/docker/dropbox-downloader/data:/data
+    environment:
+      - DB_TOKEN=${DB_TOKEN}  # Can be set via .env file or environment variable
