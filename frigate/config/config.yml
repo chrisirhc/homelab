@@ -12,9 +12,12 @@ cameras:
     enabled: true
     ffmpeg:
       inputs:
-        - path: rtsp://admin:{FRIGATE_RTSP_PASSWORD}@192.168.1.79:554/Streaming/Channels/102
+        - path: rtsp://admin:{FRIGATE_RTSP_PASSWORD}@192.168.1.79:554/Streaming/Channels/101
           roles:
             - record
+        - path: rtsp://admin:{FRIGATE_RTSP_PASSWORD}@192.168.1.79:554/Streaming/Channels/102
+          roles:
+            - detect
       # inputs:
       #   - path: rtsp://127.0.0.1:8554/front_door
       #     input_args: preset-rtsp-restream
@@ -52,4 +55,14 @@ cameras:
             - detect
     motion:
       mask: 0.289,0.104,0.291,0.056,0.001,0.054,0,0.092
+
+# record is not enabled intentionally, since we're not using frigate for event recording for now.
+record:
+  enabled: false
+
+detect:
+  # Half the resolution of the stream used for detection
+  width: 320
+  height: 180
+
 version: 0.15-1
