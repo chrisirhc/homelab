@@ -64,5 +64,7 @@ detect:
   # Half the resolution of the stream used for detection
   width: 320
   height: 180
+  # Disable this for now since it's taking up some amount of GPU
+  enabled: false
 
 version: 0.15-1
