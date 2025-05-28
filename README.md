@@ -10,6 +10,7 @@ docker-compose pull
 docker-compose up --detach
 ```
 
-
-
-- [ ] Add https://github.com/containrrr/watchtower / https://containrrr.dev/watchtower/running-multiple-instances/
+To restart a container:
+```bash
+docker-compose restart
+```
