@@ -1,5 +1,5 @@
 mqtt:
-  enabled: False
+  enabled: false
 
 # go2rtc:
 #   streams:
@@ -9,7 +9,7 @@ mqtt:
 
 cameras:
   front_door:
-    enabled: True
+    enabled: true
     ffmpeg:
       inputs:
         - path: rtsp://admin:{FRIGATE_RTSP_PASSWORD}@192.168.1.79:554/Streaming/Channels/102
@@ -21,26 +21,35 @@ cameras:
       #     roles:
       #       - record
 
+    motion:
+      mask: 0.286,0.104,0.29,0.052,0,0.047,0.002,0.101
   front_gate:
-    enabled: True
+    enabled: true
     ffmpeg:
       inputs:
         - path: rtsp://admin:{FRIGATE_RTSP_PASSWORD}@192.168.1.79:554/Streaming/Channels/202
           roles:
             - detect
 
+    motion:
+      mask: 0.289,0.095,0.293,0.056,0.001,0.058,0,0.097
   living_room:
-    enabled: True
+    enabled: true
     ffmpeg:
       inputs:
         - path: rtsp://admin:{FRIGATE_RTSP_PASSWORD}@192.168.1.79:554/Streaming/Channels/302
           roles:
             - detect
 
+    motion:
+      mask: 0.288,0.059,-0.001,0.054,0,0.094,0.291,0.097
   kitchen:
-    enabled: True
+    enabled: true
     ffmpeg:
       inputs:
         - path: rtsp://admin:{FRIGATE_RTSP_PASSWORD}@192.168.1.79:554/Streaming/Channels/402
           roles:
             - detect
+    motion:
+      mask: 0.289,0.104,0.291,0.056,0.001,0.054,0,0.092
+version: 0.15-1
