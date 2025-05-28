@@ -2,17 +2,20 @@
 # For configuration options and examples, please see:
 # https://gethomepage.dev/configs/services/
 
-- My First Group:
-    - My First Service:
-        href: http://localhost/
-        description: Homepage is awesome
+- Ready:
+    - Speed test:
+        href: http://192.168.1.253:8083/
+        widgets:
+          - type: speedtest
+            url: http://192.168.1.253:8083/
+            version: 2
+            key: PZivTJHcrZXhx0IEtXiT1EJyLFcY0ubCOd39qJvic7876dc8
+            # bitratePrecision: 3 # optional, default is 0
+    - Synology NAS:
+        href: https://192.168.1.253:5001/
+    - Home Assistant:
+        href: http://192.168.1.253:8123/
 
-- My Second Group:
-    - My Second Service:
-        href: http://localhost/
-        description: Homepage is the best
-
-- My Third Group:
-    - My Third Service:
-        href: http://localhost/
-        description: Homepage is 😎
+- WIP:
+    - Frigate:
+        href: http://192.168.1.253:5123/
