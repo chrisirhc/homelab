@@ -65,7 +65,7 @@ detect:
   width: 320
   height: 180
   # Disable this for now since it's taking up some amount of GPU
-  enabled: false
+  enabled: true
 
 detectors:
   coral:
