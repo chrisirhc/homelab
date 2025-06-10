@@ -30,6 +30,9 @@ cameras:
     enabled: true
     ffmpeg:
       inputs:
+        - path: rtsp://admin:{FRIGATE_RTSP_PASSWORD}@192.168.1.79:554/Streaming/Channels/201
+          roles:
+            - record
         - path: rtsp://admin:{FRIGATE_RTSP_PASSWORD}@192.168.1.79:554/Streaming/Channels/202
           roles:
             - detect
@@ -40,6 +43,9 @@ cameras:
     enabled: true
     ffmpeg:
       inputs:
+        - path: rtsp://admin:{FRIGATE_RTSP_PASSWORD}@192.168.1.79:554/Streaming/Channels/301
+          roles:
+            - record
         - path: rtsp://admin:{FRIGATE_RTSP_PASSWORD}@192.168.1.79:554/Streaming/Channels/302
           roles:
             - detect
@@ -50,6 +56,9 @@ cameras:
     enabled: true
     ffmpeg:
       inputs:
+        - path: rtsp://admin:{FRIGATE_RTSP_PASSWORD}@192.168.1.79:554/Streaming/Channels/401
+          roles:
+            - record
         - path: rtsp://admin:{FRIGATE_RTSP_PASSWORD}@192.168.1.79:554/Streaming/Channels/402
           roles:
             - detect
@@ -58,7 +67,7 @@ cameras:
 
 # record is not enabled intentionally, since we're not using frigate for event recording for now.
 record:
-  enabled: false
+  enabled: true
 
 detect:
   # Half the resolution of the stream used for detection
