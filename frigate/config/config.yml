@@ -67,4 +67,9 @@ detect:
   # Disable this for now since it's taking up some amount of GPU
   enabled: false
 
+detectors:
+  coral:
+    type: edgetpu
+    device: usb
+
 version: 0.15-1
