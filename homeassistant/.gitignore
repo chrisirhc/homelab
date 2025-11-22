@@ -1,1 +1,7 @@
+/.env
 /config*
+
+/mosquitto/data/**
+/mosquitto/log/**
+!/mosquitto/config/.gitkeep
+!/mosquitto/log/.gitkeep
