@@ -1,4 +1,4 @@
-version: '3'
+version: "3"
 services:
   homeassistant:
     container_name: homeassistant
@@ -11,9 +11,9 @@ services:
     networks:
       - localnet
     ports:
-        - 8123:8123
-        # Sonos?
-        - 1400:1400
+      - 8123:8123
+      # Sonos?
+      - 1400:1400
     privileged: true
     depends_on:
       - mosquitto
