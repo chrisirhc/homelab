@@ -63,6 +63,8 @@ services:
     # group_add:
     #   - dialout
     user: 1027:100
+    depends_on:
+      - mosquitto
 
 
 networks:
