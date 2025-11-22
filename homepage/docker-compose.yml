@@ -8,6 +8,6 @@ services:
             - ./config:/app/config # Make sure your local config directory exists
             - /var/run/docker.sock:/var/run/docker.sock # (optional) For docker integrations
         environment:
-            HOMEPAGE_ALLOWED_HOSTS: gethomepage.dev,192.168.132.95192.168.132.95:3000,chrisirhc.synology.me:3000 # required, may need port. See gethomepage.dev/installation/#homepage_allowed_hosts
+            HOMEPAGE_ALLOWED_HOSTS: gethomepage.dev,192.168.132.95:3000,chrisirhc.synology.me:3000 # required, may need port. See gethomepage.dev/installation/#homepage_allowed_hosts
             PUID: 1027
             PGID: 100
