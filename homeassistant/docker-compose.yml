@@ -8,8 +8,15 @@ services:
       - /etc/localtime:/etc/localtime:ro
       - /run/dbus:/run/dbus:ro
     restart: unless-stopped
+    networks:
+      - localnet
+    ports:
+        - 8123:8123
+        # Sonos?
+        - 1400:1400
     privileged: true
-    network_mode: host
+    depends_on:
+      - mosquitto
 
   mosquitto:
     container_name: mosquitto
@@ -19,6 +26,8 @@ services:
     #   - MOSQUITTO_PASSWORD
     image: eclipse-mosquitto:2
     restart: unless-stopped
+    networks:
+      - localnet
     ports:
       - "1883:1883/tcp"
     volumes:
@@ -32,3 +41,7 @@ services:
     #   interval: 1m
     #   timeout: 10s
     #   retries: 3
+
+networks:
+  localnet:
+    driver: bridge
