@@ -13,9 +13,10 @@ services:
 
   mosquitto:
     container_name: mosquitto
-    environment:
-      - MOSQUITTO_USER
-      - MOSQUITTO_PASSWORD
+    # TODO: Health checks and user name + password can come later
+    # environment:
+    #   - MOSQUITTO_USER
+    #   - MOSQUITTO_PASSWORD
     image: eclipse-mosquitto:2
     restart: unless-stopped
     ports:
@@ -24,10 +25,10 @@ services:
       - /volume1/docker/homeassistant/mosquitto/config:/mosquitto/config
       - /volume1/docker/homeassistant/mosquitto/data:/mosquitto/data
       - /volume1/docker/homeassistant/mosquitto/log:/mosquitto/log
-    healthcheck:
-      # Create new password on start
-      # docker compose exec mosquitto mosquitto_passwd -b /mosquitto/config/pwfile $MOSQUITTO_USER $MOSQUITTO_PASSWORD
-      test: ["CMD", "mosquitto_sub", "-u", "$MOSQUITTO_USER", "-P", "$MOSQUITTO_PASSWORD", "-h", "localhost", "-t", "$$SYS/broker/uptime", "-i", "docker_health_check", "-C", "1"]
-      interval: 1m
-      timeout: 10s
-      retries: 3
+    # Create new password on start
+    # docker compose exec mosquitto mosquitto_passwd -b /mosquitto/config/pwfile $MOSQUITTO_USER $MOSQUITTO_PASSWORD
+    # healthcheck:
+    #   test: ["CMD", "mosquitto_sub", "-u", "$MOSQUITTO_USER", "-P", "$MOSQUITTO_PASSWORD", "-h", "localhost", "-t", "$$SYS/broker/uptime", "-i", "docker_health_check", "-C", "1"]
+    #   interval: 1m
+    #   timeout: 10s
+    #   retries: 3
