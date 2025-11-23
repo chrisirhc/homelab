@@ -1,6 +1,8 @@
 /.env
 /config*
 
+!/config/automations.yaml
+
 /mosquitto/data/**
 /mosquitto/log/**
 !/mosquitto/data/.gitkeep

@@ -1,0 +1,41 @@
+- id: '1763877250924'
+  alias: Kaiden Light Remote
+  description: ''
+  triggers:
+  - domain: mqtt
+    device_id: 8d32bbf31da97923277d779e9cc5d5f3
+    type: action
+    subtype: 'on'
+    trigger: device
+  conditions: []
+  actions:
+  - action: light.turn_on
+    metadata: {}
+    data:
+      color_temp_kelvin: 2000
+      brightness_pct: 1
+    target:
+      device_id:
+      - dccb47266b4dee410020a86b46fed804
+      - 63b35d6ddbe9b5e25359fcfe3b3169ad
+      - ea21b200db2b429e5c19341d516efaab
+  mode: single
+- id: '1763877373794'
+  alias: 'Kaiden Light Remote: Off'
+  description: ''
+  triggers:
+  - domain: mqtt
+    device_id: 8d32bbf31da97923277d779e9cc5d5f3
+    type: action
+    subtype: 'off'
+    trigger: device
+  conditions: []
+  actions:
+  - action: light.turn_off
+    metadata: {}
+    data: {}
+    target:
+      entity_id:
+      - light.smart_light_rgbcw_7
+      - light.smart_light_rgbcw_8
+  mode: single
