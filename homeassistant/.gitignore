@@ -3,5 +3,8 @@
 
 /mosquitto/data/**
 /mosquitto/log/**
-!/mosquitto/config/.gitkeep
+!/mosquitto/data/.gitkeep
 !/mosquitto/log/.gitkeep
+
+/zigbee2mqtt-data/
+!/zigbee2mqtt-data/.gitkeep
