@@ -9,16 +9,28 @@
     trigger: device
   conditions: []
   actions:
-  - action: light.turn_on
-    metadata: {}
-    data:
-      color_temp_kelvin: 2000
-      brightness_pct: 1
-    target:
-      device_id:
-      - dccb47266b4dee410020a86b46fed804
-      - 63b35d6ddbe9b5e25359fcfe3b3169ad
-      - ea21b200db2b429e5c19341d516efaab
+  - if:
+    - condition: device
+      type: is_on
+      device_id: ea21b200db2b429e5c19341d516efaab
+      entity_id: 07ece1ddae68d03d0f4d097dd296cf1f
+      domain: light
+    then:
+    - action: scene.turn_on
+      metadata: {}
+      data: {}
+      target:
+        entity_id: scene.brighten_kaiden_bedroom
+    else:
+    - action: light.turn_on
+      metadata: {}
+      data:
+        color_temp_kelvin: 2000
+        brightness_pct: 1
+      target:
+        device_id:
+        - 63b35d6ddbe9b5e25359fcfe3b3169ad
+        - ea21b200db2b429e5c19341d516efaab
   mode: single
 - id: '1763877373794'
   alias: 'Kaiden Light Remote: Off'
@@ -38,4 +50,58 @@
       entity_id:
       - light.smart_light_rgbcw_7
       - light.smart_light_rgbcw_8
+  mode: single
+- id: '1763946602731'
+  alias: Kaiden Remote (Local)
+  description: ''
+  triggers:
+  - domain: mqtt
+    device_id: 8d32bbf31da97923277d779e9cc5d5f3
+    type: action
+    subtype: 'on'
+    trigger: device
+  conditions: []
+  actions:
+  - if:
+    - condition: device
+      type: is_on
+      device_id: 98a2bc95b4b399648fd982a117ce7ddb
+      entity_id: 1e2813efdc92e1ccadfd330bd4a3e2c7
+      domain: light
+    then:
+    - action: scene.turn_on
+      metadata: {}
+      data: {}
+      target:
+        entity_id:
+        - scene.brighten_kaiden_room_local
+    else:
+    - action: light.turn_on
+      metadata: {}
+      data:
+        color_temp_kelvin: 2000
+        brightness_pct: 1
+      target:
+        entity_id:
+        - light.kaiden_bedroom_ceiling_interior_local
+        - light.kaiden_bedroom_ceiling_exterior_local
+  mode: single
+- id: '1763946969493'
+  alias: 'Kaiden Remote: Off (Local)'
+  description: ''
+  triggers:
+  - domain: mqtt
+    device_id: 8d32bbf31da97923277d779e9cc5d5f3
+    type: action
+    subtype: 'off'
+    trigger: device
+  conditions: []
+  actions:
+  - action: light.turn_off
+    metadata: {}
+    data: {}
+    target:
+      entity_id:
+      - light.kaiden_bedroom_ceiling_interior_local
+      - light.kaiden_bedroom_ceiling_exterior_local
   mode: single
