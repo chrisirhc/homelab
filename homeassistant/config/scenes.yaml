@@ -1,0 +1,128 @@
+- id: '1763946363258'
+  name: Dim Kaiden Room (Local)
+  entities:
+    light.kaiden_bedroom_ceiling_exterior_local:
+      min_color_temp_kelvin: 2700
+      max_color_temp_kelvin: 6500
+      min_mireds: 153
+      max_mireds: 370
+      effect_list:
+      - Scene
+      - Music
+      - 'off'
+      supported_color_modes:
+      - color_temp
+      - hs
+      effect: 'off'
+      color_mode: color_temp
+      brightness: 3
+      color_temp_kelvin: 2700
+      color_temp: 370
+      hs_color:
+      - 28.395
+      - 65.723
+      rgb_color:
+      - 255
+      - 167
+      - 87
+      xy_color:
+      - 0.525
+      - 0.388
+      friendly_name: Kaiden Bedroom Ceiling Exterior (Local)
+      supported_features: 4
+      state: 'on'
+    light.kaiden_bedroom_ceiling_interior_local:
+      min_color_temp_kelvin: 2700
+      max_color_temp_kelvin: 6500
+      min_mireds: 153
+      max_mireds: 370
+      effect_list:
+      - Scene
+      - Music
+      - 'off'
+      supported_color_modes:
+      - color_temp
+      - hs
+      effect: 'off'
+      color_mode: color_temp
+      brightness: 3
+      color_temp_kelvin: 2700
+      color_temp: 370
+      hs_color:
+      - 28.395
+      - 65.723
+      rgb_color:
+      - 255
+      - 167
+      - 87
+      xy_color:
+      - 0.525
+      - 0.388
+      friendly_name: Kaiden Bedroom Ceiling Interior (Local)
+      supported_features: 4
+      state: 'on'
+  metadata: {}
+- id: '1763946458273'
+  name: Brighten Kaiden Room (Local)
+  entities:
+    light.kaiden_bedroom_ceiling_exterior_local:
+      min_color_temp_kelvin: 2700
+      max_color_temp_kelvin: 6500
+      min_mireds: 153
+      max_mireds: 370
+      effect_list:
+      - Scene
+      - Music
+      - 'off'
+      supported_color_modes:
+      - color_temp
+      - hs
+      effect: 'off'
+      color_mode: color_temp
+      brightness: 255
+      color_temp_kelvin: 2700
+      color_temp: 370
+      hs_color:
+      - 28.395
+      - 65.723
+      rgb_color:
+      - 255
+      - 167
+      - 87
+      xy_color:
+      - 0.525
+      - 0.388
+      friendly_name: Kaiden Bedroom Ceiling Exterior (Local)
+      supported_features: 4
+      state: 'on'
+    light.kaiden_bedroom_ceiling_interior_local:
+      min_color_temp_kelvin: 2700
+      max_color_temp_kelvin: 6500
+      min_mireds: 153
+      max_mireds: 370
+      effect_list:
+      - Scene
+      - Music
+      - 'off'
+      supported_color_modes:
+      - color_temp
+      - hs
+      effect: 'off'
+      color_mode: color_temp
+      brightness: 255
+      color_temp_kelvin: 2700
+      color_temp: 370
+      hs_color:
+      - 28.395
+      - 65.723
+      rgb_color:
+      - 255
+      - 167
+      - 87
+      xy_color:
+      - 0.525
+      - 0.388
+      friendly_name: Kaiden Bedroom Ceiling Interior (Local)
+      supported_features: 4
+      state: 'on'
+  metadata: {}

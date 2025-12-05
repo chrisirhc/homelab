@@ -1,6 +1,7 @@
 /.env
-/config*
 
+/config/*
+/config-*
 !/config/automations.yaml
 !/config/scenes.yaml
 !/config/scripts.yaml
