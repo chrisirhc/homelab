@@ -4,24 +4,24 @@
 
 - Ready:
     - Speed test:
-        href: http://192.168.132.95:8083/
+        href: http://fiftytblock.lan:8083/
         widgets:
           - type: speedtest
-            url: http://192.168.132.95:8083/
+            url: http://fiftytblock.lan:8083/
             version: 2
             key: PZivTJHcrZXhx0IEtXiT1EJyLFcY0ubCOd39qJvic7876dc8
             # bitratePrecision: 3 # optional, default is 0
     - Synology NAS:
-        href: https://192.168.132.95:5001/
+        href: https://fiftytblock.lan:5001/
     - Home Assistant:
-        href: http://192.168.132.95:8123/
+        href: http://fiftytblock.lan:8123/
     - Paperless:
-        href: http://192.168.132.95:8000/
+        href: http://fiftytblock.lan:8000/
         widgets:
           - type: paperlessngx
-            url: http://192.168.132.95:8000/
+            url: http://fiftytblock.lan:8000/
             key: 1ae8ce55bdcb517e785a21434cb0da795610be7e
 
 - WIP:
     - Frigate:
-        href: http://192.168.132.95:5123/
+        href: http://fiftytblock.lan:5123/
