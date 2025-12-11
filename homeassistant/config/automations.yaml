@@ -105,3 +105,80 @@
       - light.kaiden_bedroom_ceiling_interior_local
       - light.kaiden_bedroom_ceiling_exterior_local
   mode: single
+- id: '1764938657332'
+  alias: Turn off when no presence
+  description: ''
+  triggers:
+  - type: not_occupied
+    device_id: 1bb901dcd8f7a0a167d283f0552517bd
+    entity_id: 42b2581acfd7812af22eee43b073dc03
+    domain: binary_sensor
+    trigger: device
+  conditions:
+  - condition: device
+    type: is_on
+    device_id: 2888a09df65f469e2c85d299782d7f25
+    entity_id: 90a9708a4fd66d5d22a3679daaa16420
+    domain: light
+  actions:
+  - type: turn_off
+    device_id: 2888a09df65f469e2c85d299782d7f25
+    entity_id: 90a9708a4fd66d5d22a3679daaa16420
+    domain: light
+  mode: single
+- id: '1764938726674'
+  alias: Turn on bathroom ceiling when occupied
+  description: ''
+  triggers:
+  - type: occupied
+    device_id: 1bb901dcd8f7a0a167d283f0552517bd
+    entity_id: 42b2581acfd7812af22eee43b073dc03
+    domain: binary_sensor
+    metadata:
+      secondary: false
+    trigger: device
+  conditions:
+  - condition: device
+    type: is_off
+    device_id: 2888a09df65f469e2c85d299782d7f25
+    entity_id: 90a9708a4fd66d5d22a3679daaa16420
+    domain: light
+  actions:
+  - choose:
+    - conditions:
+      - condition: time
+        after: 06:30:00
+        before: '18:00:00'
+      - type: is_illuminance
+        condition: device
+        device_id: 1bb901dcd8f7a0a167d283f0552517bd
+        entity_id: a6620b56853b5aa3a7dc69672699d409
+        domain: sensor
+        below: 1300
+      sequence:
+      - action: scene.turn_on
+        metadata: {}
+        data: {}
+        target:
+          entity_id: scene.bathroom_ceiling_bright
+    - conditions:
+      - condition: time
+        after: '18:00:00'
+        before: '19:30:00'
+      sequence:
+      - action: scene.turn_on
+        metadata: {}
+        data: {}
+        target:
+          entity_id: scene.bathroom_ceiling_dim
+    - conditions:
+      - condition: time
+        after: '19:30:00'
+        before: 06:30:00
+      sequence:
+      - action: scene.turn_on
+        metadata: {}
+        data: {}
+        target:
+          entity_id: scene.bathroom_ceiling_dark
+  mode: single

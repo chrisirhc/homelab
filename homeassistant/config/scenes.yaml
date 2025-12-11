@@ -126,3 +126,165 @@
       supported_features: 4
       state: 'on'
   metadata: {}
+- id: '1764938557083'
+  name: Bathroom Ceiling Dark
+  entities:
+    light.bathroom_ceiling_recessed_light:
+      min_color_temp_kelvin: 2700
+      max_color_temp_kelvin: 6500
+      min_mireds: 153
+      max_mireds: 370
+      effect_list:
+      - Scene
+      - Music
+      - 'off'
+      supported_color_modes:
+      - color_temp
+      - hs
+      effect: 'off'
+      color_mode: hs
+      brightness: 5
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      - 0
+      - 100
+      rgb_color:
+      - 255
+      - 0
+      - 0
+      xy_color:
+      - 0.701
+      - 0.299
+      friendly_name: Bathroom Ceiling
+      supported_features: 4
+      state: 'on'
+    switch.bathroom_ceiling_recessed_light_do_not_disturb:
+      friendly_name: Bathroom Ceiling Do not disturb
+      state: 'off'
+    select.bathroom_ceiling_recessed_light_scene:
+      options:
+      - night
+      - reading
+      - working
+      - leisure
+      - Soft
+      - Colorful
+      - Dazzling
+      - Gorgeous
+      friendly_name: Bathroom Ceiling Scene
+      state: unknown
+    time.bathroom_ceiling_recessed_light_timer:
+      friendly_name: Bathroom Ceiling Timer
+      state: 00:00:00
+  metadata: {}
+- id: '1764974219803'
+  name: Bathroom Ceiling Dim
+  entities:
+    light.bathroom_ceiling_recessed_light:
+      min_color_temp_kelvin: 2700
+      max_color_temp_kelvin: 6500
+      min_mireds: 153
+      max_mireds: 370
+      effect_list:
+      - Scene
+      - Music
+      - 'off'
+      supported_color_modes:
+      - color_temp
+      - hs
+      effect: 'off'
+      color_mode: color_temp
+      brightness: 1
+      color_temp_kelvin: 2700
+      color_temp: 370
+      hs_color:
+      - 28.395
+      - 65.723
+      rgb_color:
+      - 255
+      - 167
+      - 87
+      xy_color:
+      - 0.525
+      - 0.388
+      rhythm_mode: AAAAAAA=
+      sleep_mode: AAA=
+      wakeup_mode: AAA=
+      friendly_name: Bathroom Ceiling
+      supported_features: 4
+      state: 'on'
+    switch.bathroom_ceiling_recessed_light_do_not_disturb:
+      friendly_name: Bathroom Ceiling Do not disturb
+      state: 'off'
+    select.bathroom_ceiling_recessed_light_scene:
+      options:
+      - night
+      - reading
+      - working
+      - leisure
+      - Soft
+      - Colorful
+      - Dazzling
+      - Gorgeous
+      friendly_name: Bathroom Ceiling Scene
+      state: unknown
+    time.bathroom_ceiling_recessed_light_timer:
+      friendly_name: Bathroom Ceiling Timer
+      state: 00:00:00
+  metadata: {}
+- id: '1764974277941'
+  name: Bathroom Ceiling Bright
+  entities:
+    light.bathroom_ceiling_recessed_light:
+      min_color_temp_kelvin: 2700
+      max_color_temp_kelvin: 6500
+      min_mireds: 153
+      max_mireds: 370
+      effect_list:
+      - Scene
+      - Music
+      - 'off'
+      supported_color_modes:
+      - color_temp
+      - hs
+      effect: 'off'
+      color_mode: color_temp
+      brightness: 255
+      color_temp_kelvin: 2700
+      color_temp: 370
+      hs_color:
+      - 28.395
+      - 65.723
+      rgb_color:
+      - 255
+      - 167
+      - 87
+      xy_color:
+      - 0.525
+      - 0.388
+      rhythm_mode: AAAAAAA=
+      sleep_mode: AAA=
+      wakeup_mode: AAA=
+      friendly_name: Bathroom Ceiling
+      supported_features: 4
+      state: 'on'
+    switch.bathroom_ceiling_recessed_light_do_not_disturb:
+      friendly_name: Bathroom Ceiling Do not disturb
+      state: 'off'
+    select.bathroom_ceiling_recessed_light_scene:
+      options:
+      - night
+      - reading
+      - working
+      - leisure
+      - Soft
+      - Colorful
+      - Dazzling
+      - Gorgeous
+      friendly_name: Bathroom Ceiling Scene
+      state: unknown
+    time.bathroom_ceiling_recessed_light_timer:
+      friendly_name: Bathroom Ceiling Timer
+      state: 00:00:00
+  metadata: {}
