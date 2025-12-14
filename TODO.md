@@ -1,3 +1,4 @@
+- [ ] Go through and do port forwarding for services in https://kb.synology.com/en-sg/DSM/tutorial/What_network_ports_are_used_by_Synology_services
 - [ ] Add https://github.com/containrrr/watchtower / https://containrrr.dev/watchtower/running-multiple-instances/
 - [ ] https://gethomepage.dev/widgets/services/homeassistant/
 - [ ] Consolidate to single docker compose at root
